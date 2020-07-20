@@ -7,8 +7,6 @@
 //下载相关
 #import "DWDownloadSessionManager.h"
 #import "DWDownloadModel.h"
-//zwl test
-//#import "NSURLSession+DWCorrectedResumeData.h"
 #import "DWDownloadUtility.h"
 #import "DWBatchDownloadUtility.h"
 
@@ -31,5 +29,5 @@
 #import "DWBarrageModel.h"
 
 //版本号
-#define SDK_VERSION @"4.6.1"
+#define SDK_VERSION @"4.7.0"
 

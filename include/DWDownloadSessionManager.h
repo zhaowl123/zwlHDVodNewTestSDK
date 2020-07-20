@@ -71,13 +71,6 @@
  */
 +(DWDownloadSessionManager *)manager;
 
-//zwl test
-//没啥用了，干掉
-/**
- 配置后台session
- */
-//-(void)configureBackroundSession;
-
 /**
  * 初始化DWDownloadModel
 
@@ -141,7 +134,7 @@
  @param URLString 下载地址
  @return DWDownloadModel对象
  */
-//- (DWDownloadModel *)downLoadingModelForURLString:(NSString *)URLString;
+- (DWDownloadModel *)downLoadingModelForURLString:(NSString *)URLString;
 
 /**
  判断当前资源是已在下载队列中

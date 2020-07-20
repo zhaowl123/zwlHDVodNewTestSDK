@@ -26,13 +26,6 @@ typedef void(^BatchDownloadUtilityErrorBlock)(NSError *error);
  */
 @property (nonatomic,copy)NSString *verificationCode;
 
-//zwl test
-//新增一个字段 用来记录C端学员id
-/**
- 学员id，需要的话请设置，默认为空
- */
-@property(nonatomic,strong)NSString * roleId;
-
 //注意！ 回调方法可能不在主线程中，如果在里面进行UI操作，请回到主线程中进行
 /**
  全部视频数据获取出错

@@ -17,11 +17,10 @@
 /// @param vid 视频id
 /// @param cdn cdn域名
 /// @param retry 接口重试次数
-/// @param data 接口返回税局，json串
+/// @param data 接口返回数据，json串
 /// @param et 接口耗时
 +(void)reportPlayActionWithUserid:(NSString *)userid
                            RoleId:(NSString *)roleId
-//                            Event:(NSString *)event
                              Code:(NSString *)code
                               Vid:(NSString *)vid
                               Cdn:(NSString *)cdn

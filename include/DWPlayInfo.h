@@ -15,8 +15,7 @@ typedef void (^DWPlayInfoFinishBlock)(DWVodVideoModel * vodVideo);
 //授权验证码
 @property (nonatomic,copy)NSString *verificationCode;
 
-//zwl test
-//新增一个字段 用来记录C端学员id
+//客户端用户id，选填
 @property(nonatomic,strong)NSString * roleId;
 
 //请求失败回调
