@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
 
   spec.vendored_libraries = 'include/libCCSDK.a' 
 
-  spec.source_files = 'include/*.{h,m}' , 'include/VodModule.modulemap'
+  spec.source_files = 'include/*.{h,m}' 
 
   spec.resources = ['include/DWResource.bundle' , 'include/vrlibraw.bundle']
 
@@ -37,10 +37,10 @@ Pod::Spec.new do |spec|
 
   spec.dependency 'HDBaseSDK' , '~> 1.0.2'
 
-  spec.module_map = 'include/VodModule.modulemap'
+  spec.module_map = 'include/module.modulemap'
 
-  spec.pod_target_xcconfig = {
- 	'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/CCVodSDK/Module'
-  }
+  #spec.pod_target_xcconfig = {	'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/CCVodSDK/Module' , 'DEFINES_MODULE' = 'YES' }
+  spec.pod_target_xcconfig = { 'DEFINES_MODULE' = 'YES' }
+
 
 end

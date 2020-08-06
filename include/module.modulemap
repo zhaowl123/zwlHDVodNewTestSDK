@@ -1,6 +1,5 @@
-module DWSDK {
+module CCVodSDK {
   umbrella header "DWSDK.h"
-
   export *
   module * { export * }
 }
