@@ -12,46 +12,84 @@
 
 @interface DWUPnPDevice : NSObject
 
-///设备ID
+/**
+ *  @brief 设备ID
+ */
 @property(nonatomic,copy)NSString * uuid;
 
-///设备loactionURL
+/**
+ *  @brief 设备loactionURL
+ */
 @property(nonatomic,strong)NSURL * loaction;
 
-///设备地址
+/**
+ *  @brief 设备地址
+ */
 @property(nonatomic,copy)NSString * URLHeader;
 
-///友好的设备名称
+/**
+ *  @brief 友好的设备名称
+ */
 @property(nonatomic,copy)NSString * friendlyName;
 
-//设备名称
+/**
+ *  @brief 设备名称
+ */
 @property(nonatomic,copy)NSString * modelName;
 
+/**
+ *  @brief DWServiceModel对象
+ */
 @property(nonatomic,strong)DWServiceModel * AVTransport;
 
+/**
+ *  @brief DWServiceModel对象
+ */
 @property(nonatomic,strong)DWServiceModel * RenderingControl;
 
-- (void)setArray:(NSArray *)array;
+/*!
+ * @method
+ * @abstract 设置数组
+ * @discussion 设置数组
+ * @param array 数组
+ */
+-(void)setArray:(NSArray *)array;
 
 @end
 
 @interface DWServiceModel : NSObject
 
-///服务类型
-@property (nonatomic,copy)NSString * serviceType;
+/**
+ *  @brief 服务类型
+ */
+@property(nonatomic,copy)NSString * serviceType;
 
-///服务ID
-@property (nonatomic,copy)NSString * serviceId;
+/**
+ *  @brief 服务ID
+ */
+@property(nonatomic,copy)NSString * serviceId;
 
-///controlURL
-@property (nonatomic,copy)NSString * controlURL;
+/**
+ *  @brief controlURL
+ */
+@property(nonatomic,copy)NSString * controlURL;
 
-///eventSubURL
-@property (nonatomic,copy)NSString * eventSubURL;
+/**
+ *  @brief eventSubURL
+ */
+@property(nonatomic,copy)NSString * eventSubURL;
 
-///SCPDURL
-@property (nonatomic,copy)NSString * SCPDURL;
+/**
+ *  @brief SCPDURL
+ */
+@property(nonatomic,copy)NSString * SCPDURL;
 
-- (void)setArray:(NSArray *)array;
+/*!
+ * @method
+ * @abstract 设置数组
+ * @discussion 设置数组
+ * @param array 数组
+ */
+-(void)setArray:(NSArray *)array;
 
 @end

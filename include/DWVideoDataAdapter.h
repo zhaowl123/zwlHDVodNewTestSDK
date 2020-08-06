@@ -10,5 +10,10 @@
 #import <AVFoundation/AVFoundation.h>
 
 @protocol DWVideoDataAdapter <NSObject>
+
+/** 拷贝数据
+ @return CVPixelBufferRef上下文
+ */
 - (CVPixelBufferRef)copyPixelBuffer;
+
 @end

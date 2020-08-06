@@ -10,15 +10,27 @@
 
 @interface DWUPnPAVPositionInfo : NSObject
 
-///总时长
+/**
+ *  @brief 总时长
+ */
 @property(nonatomic, assign)float trackDuration;
 
-///当前时长
+/**
+ *  @brief 当前时长
+ */
 @property(nonatomic, assign)float absTime;
 
-///与absTime无差别
+/**
+ *  @brief 与absTime无差别
+ */
 @property(nonatomic, assign)float relTime;
 
+/*!
+ * @method
+ * @abstract 设置数组
+ * @discussion 设置数组
+ * @param array 数组
+ */
 - (void)setArray:(NSArray *)array;
 
 @end
@@ -26,15 +38,27 @@
 
 @interface DWUPnPTransportInfo : NSObject
 
-///当前播放状态
+/**
+ *  @brief 当前播放状态
+ */
 @property(nonatomic, copy)NSString * currentTransportState;
 
-///当前状态
+/**
+ *  @brief 当前状态
+ */
 @property(nonatomic, copy)NSString * currentTransportStatus;
 
-///当前速率
+/**
+ *  @brief 当前速率
+ */
 @property(nonatomic, copy)NSString * currentSpeed;
 
+/*!
+ * @method
+ * @abstract 设置数组
+ * @discussion 设置数组
+ * @param array 数组
+ */
 - (void)setArray:(NSArray *)array;
 
 @end
@@ -42,7 +66,21 @@
 
 @interface NSString(UPnP)
 
+/*!
+ * @method
+ * @abstract 格式化时间
+ * @discussion 返回时间字符串
+ * @param timeValue 时间
+ * @result 返回值
+ */
 +(NSString *)stringWithDurationTime:(float)timeValue;
+
+/*!
+ * @method
+ * @abstract 获取时间
+ * @discussion 获取时间
+ * @result 返回值
+ */
 - (float)durationTime;
 
 @end

@@ -1,9 +1,8 @@
-
 Pod::Spec.new do |spec|
 
   spec.name         = "zwlHDVodNewTestSDK"
 
-  spec.version      = '0.0.3'
+  spec.version      = '0.0.4'
 
   spec.summary      = "An iOS SDK for CCVod Service"
 
@@ -15,42 +14,27 @@ Pod::Spec.new do |spec|
 
   spec.source = { :git => "https://github.com/zhaowl123/zwlHDVodNewTestSDK.git",:tag => spec.version.to_s }
 
+  spec.static_framework = true
+
   spec.platform = :ios, '8.0'
 
-  spec.vendored_frameworks = 'HDBaseSDK/HDBaseUtils.framework'
+  spec.requires_arc = true
 
-  spec.frameworks = 'CoreFoundation' , 'QuartzCore' , 'SystemConfiguration' , 'Security' , 'UIKit' , 'Foundation'
+  spec.vendored_libraries = 'include/libCCSDK.a' 
 
+  spec.source_files = 'include/*.{h,m}'
 
-  subspec 'zwlVod' do |vodSp|
+  spec.resources = ['include/DWResource.bundle' , 'include/vrlibraw.bundle']
 
-       vodSp.static_framework = true
+  spec.frameworks = 'CoreServices'
 
-       vodSp.requires_arc = true
+  spec.xcconfig = {
+      'HEADER_SEARCH_PATHS' => '${SDKROOT}/usr/include/libxml2',
+      'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES'
+  }
 
-       vodSp.vendored_libraries = 'include/libCCSDK.a' 
+  spec.libraries = 'xml2'
 
-       vodSp.source_files = 'include/*.{h,m}'
-
-       vodSp.resources = ['include/DWResource.bundle' , 'include/vrlibraw.bundle']
-
-       vodSp.frameworks = 'CoreServices'
-
-       vodSp.xcconfig = {
-          'HEADER_SEARCH_PATHS' => '${SDKROOT}/usr/include/libxml2',
-          'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES'
-       }
-
-       vodSp.libraries = 'xml2'
-
-  end
-	
-  subspec 'zwlLive' do |liveSp|
-
-       liveSp.vendored_frameworks = 'SDK/Live_iOS_Play_SDK(有连麦)/*.{framework}'
-     
-       liveSp.resource = 'SDK/Live_iOS_Play_SDK(有连麦)/CCBundle.bundle'
-
-  end
+  spec.dependency 'HDBaseSDK_Universally' , '~> 1.0.0'
 
 end

@@ -24,13 +24,19 @@ typedef struct DWVideoFrame DWVideoFrame;
 
 @protocol DWVideoFrameCallback <NSObject>
 @required
-- (void) onFrameAvailable:(DWVideoFrame*) frame;
+/** 视频帧回调
+ @param frame 视频帧
+ */
+-(void)onFrameAvailable:(DWVideoFrame*)frame;
 @end
 
 #pragma mark just for ijk
 @protocol DWIJKSDLGLView <NSObject>
 @required
-- (void) setFrameCallback:(id<DWVideoFrameCallback>) callback;
+/** 设置帧回调
+ @param callback 回调
+ */
+-(void)setFrameCallback:(id<DWVideoFrameCallback>)callback;
 @end
 
 

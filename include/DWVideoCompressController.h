@@ -28,13 +28,16 @@ typedef NS_ENUM(NSInteger, DWUIImagePickerControllerMediaType) {
 
 @interface DWVideoCompressController : UIImagePickerController
 
-/**
- *  @brief 初始化对象
- *  @param videoQuality   媒体质量：高，中，低
- *  @param sourceType     媒体来源：所有媒体，摄像头，仅相册
- *  @param mediaType      媒体类型：图片或视频
+/*!
+ * @method
+ * @abstract 初始化对象
+ * @discussion 初始化对象
+ * @param videoQuality 媒体质量：高，中，低
+ * @param sourceType 媒体来源：所有媒体，摄像头，仅相册
+ * @param mediaType 媒体类型：图片或视频
+ * @result DWVideoCompressController对象
  */
-- (id)initWithQuality:(DWUIImagePickerControllerQualityType)videoQuality
-        andSourceType:(DWUIImagePickerControllerSourceType)sourceType
-         andMediaType:(DWUIImagePickerControllerMediaType)mediaType;
+-(id)initWithQuality:(DWUIImagePickerControllerQualityType)videoQuality
+       andSourceType:(DWUIImagePickerControllerSourceType)sourceType
+        andMediaType:(DWUIImagePickerControllerMediaType)mediaType;
 @end

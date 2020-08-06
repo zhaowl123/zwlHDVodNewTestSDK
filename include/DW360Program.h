@@ -13,17 +13,69 @@
     GLuint vertexShaderHandle,fragmentShaderHandle;
     
 }
-@property (nonatomic) int mMVPMatrixHandle;
-@property (nonatomic) int mMVMatrixHandle;
-@property (nonatomic) int mPositionHandle;
-@property (nonatomic) int mTextureCoordinateHandle;
-@property (nonatomic) int mProgramHandle;
-@property (nonatomic) int mContentType;
-@property (nonatomic) int* mTextureUniformHandle;
-@property (nonatomic) int mColorConversionHandle;
-- (void) build;
-- (void) use;
-- (int) getTextureUniformSize;
+
+/**
+ *  @brief MVP矩阵
+ */
+@property(nonatomic)int mMVPMatrixHandle;
+
+/**
+ *  @brief MV矩阵
+ */
+@property(nonatomic)int mMVMatrixHandle;
+
+/**
+ *  @brief 坐标
+ */
+@property(nonatomic)int mPositionHandle;
+
+/**
+ *  @brief 纹理坐标
+ */
+@property(nonatomic)int mTextureCoordinateHandle;
+
+/**
+ *  @brief program
+ */
+@property(nonatomic)int mProgramHandle;
+
+/**
+ *  @brief 内容类型
+ */
+@property(nonatomic)int mContentType;
+
+/**
+ *  @brief textureUniform指针
+ */
+@property(nonatomic)int* mTextureUniformHandle;
+
+/**
+ *  @brief 色彩转换
+ */
+@property(nonatomic)int mColorConversionHandle;
+
+/*!
+ * @method
+ * @abstract 初始化准备
+ * @discussion 初始化准备
+ */
+-(void)build;
+
+/*!
+ * @method
+ * @abstract 使用
+ * @discussion 使用
+ */
+-(void)use;
+
+/*!
+ * @method
+ * @abstract 获取默认值
+ * @discussion 获取默认值
+ * @result textureUniformSize
+ */
+-(int)getTextureUniformSize;
+
 @end
 
 @interface DWRGBAProgram : DW360Program
