@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "zwlHDVodNewTestSDK"
 
-  spec.version      = '0.0.4'
+  spec.version      = '0.0.5'
 
   spec.summary      = "An iOS SDK for CCVod Service"
 
@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
 
   spec.vendored_libraries = 'include/libCCSDK.a' 
 
-  spec.source_files = 'include/*.{h,m}'
+  spec.source_files = 'include/*.{h,m}' , 'include/VodModule.modulemap'
 
   spec.resources = ['include/DWResource.bundle' , 'include/vrlibraw.bundle']
 
@@ -35,6 +35,12 @@ Pod::Spec.new do |spec|
 
   spec.libraries = 'xml2'
 
-  spec.dependency 'HDBaseSDK_Universally' , '~> 1.0.0'
+  spec.dependency 'HDBaseSDK' , '~> 1.0.2'
+
+  spec.module_map = 'include/VodModule.modulemap'
+
+  spec.pod_target_xcconfig = {
+ 	'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/CCVodSDK/Module'
+  }
 
 end
