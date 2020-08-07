@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "zwlHDVodNewTestSDK"
 
-  spec.version      = '0.0.6'
+  spec.version      = '0.0.8'
 
   spec.summary      = "An iOS SDK for CCVod Service"
 
@@ -37,11 +37,6 @@ Pod::Spec.new do |spec|
 
   spec.dependency 'HDBaseSDK' , '~> 1.0.2'
 
-  #spec.module_map = 'include/module.modulemap'
-
-  spec.preserve_paths = ['include/module.moduleamp' , 'include/DWSDK.h']
-
-  spec.pod_target_xcconfig = { 'SWIFT_INCLUDE_PATHS' => ['$(PODS_ROOT)/include' , '$(PODS_TARGET_SRCROOT)/include' ] }
 
 
 end
