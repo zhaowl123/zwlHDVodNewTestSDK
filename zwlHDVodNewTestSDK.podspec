@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "zwlHDVodNewTestSDK"
 
-  spec.version      = '0.0.11'
+  spec.version      = '0.0.12'
 
   spec.summary      = "An iOS SDK for CCVod Service"
 
@@ -24,16 +24,14 @@ Pod::Spec.new do |spec|
 
   spec.source_files = 'include/newOCSDK/*.{h,m}' 
 
-  spec.resources = ['include/newOCSDK/DWResource.bundle']
-
   spec.frameworks = 'CoreServices'
 
   spec.xcconfig = {
       'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES'
   }
 
-  #spec.preserve_paths = ['Module/module.moduleamp' , 'Module/DWSDK.h']
+  spec.preserve_paths = ['include/Modules/module.moduleamp' , 'include/Modules/newDefine.h']
 
-  #spec.pod_target_xcconfig = { 'SWIFT_INCLUDE_PATHS' => ['$(PODS_ROOT)/zwlHDVodNewTestSDK/Module' , '$(PODS_TARGET_SRCROOT)/zwlHDVodNewTestSDK/Module' ] }
+  spec.pod_target_xcconfig = { 'SWIFT_INCLUDE_PATHS' => ['$(PODS_ROOT)/zwlHDVodNewTestSDK/Module' , '$(PODS_TARGET_SRCROOT)/zwlHDVodNewTestSDK/Module' ] }
 
 end

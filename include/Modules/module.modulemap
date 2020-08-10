@@ -1,0 +1,4 @@
+module newOCSDK {
+  header "newDefine.h.h"
+  export *
+}

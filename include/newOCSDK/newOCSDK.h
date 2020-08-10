@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "newDefine.h"
 
 @interface newOCSDK : NSObject
+
+@property(nonatomic,strong)file1 * fine;
 
 @end
