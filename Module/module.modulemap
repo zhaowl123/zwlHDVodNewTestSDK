@@ -1,4 +1,0 @@
-module CCVodSDK {
-  header "DWSDK.h"
-  export *
-}
