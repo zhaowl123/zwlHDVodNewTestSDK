@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "zwlHDVodNewTestSDK"
 
-  spec.version      = '0.0.15'
+  spec.version      = '0.0.18'
 
   spec.summary      = "An iOS SDK for CCVod Service"
 
@@ -16,7 +16,9 @@ Pod::Spec.new do |spec|
 
   spec.platform = :ios, '8.0'
 
-  spec.vendored_frameworks = 'zwlTestSDK/DWSDK.framework'
+  spec.resources = ['zwlTestSDK/CCVodSDK.framework/DWResource.bundle' , 'zwlTestSDK/CCVodSDK.framework/vrlibraw.bundle']
+
+  spec.vendored_frameworks = 'zwlTestSDK/CCVodSDK.framework'
 
   spec.dependency 'HDBaseSDK'
 

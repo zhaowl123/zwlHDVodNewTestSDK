@@ -1,6 +1,0 @@
-framework module DWSDK {
-  umbrella header "DWSDK.h"
-
-  export *
-  module * { export * }
-}
