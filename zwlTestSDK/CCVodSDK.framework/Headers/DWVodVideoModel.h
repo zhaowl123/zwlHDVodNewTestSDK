@@ -426,6 +426,23 @@
  */
 @property(nonatomic, assign, readonly)NSInteger showTime;
 
+//zwl test
+/**
+ *  @brief 是否允许跳过
+ */
+@property(nonatomic, assign, readonly)BOOL isJump;
+
+/**
+ *  @brief 答错是否可以继续播放
+ */
+@property(nonatomic, assign, readonly)BOOL isPlay;
+
+/**
+*  @brief 课堂练习回看时间点
+*/
+@property(nonatomic, assign, readonly)NSInteger backSecond;
+
+
 /**
  *  @brief 课堂练习包含的问题列表
  */
@@ -450,6 +467,12 @@
  *  @brief 问题解释内容
  */
 @property(nonatomic, strong, readonly)NSString * explainInfo;
+
+//zwl test
+/**
+*  @brief 问题回看时间点
+*/
+@property(nonatomic, assign, readonly)NSInteger backSecond;
 
 /**
  *  @brief 问题类型，0:单选 1:多选 2:填空

@@ -166,7 +166,6 @@ NS_ASSUME_NONNULL_BEGIN
  * @method
  * @abstract 初始化方法
  * @discussion 初始化方法，请调用此方法进行初始化，不要调用init，initWithFrame等初始化方法
- * @param time 当前播放时间
  * @result DWPlayerSkinView对象
  */
 -(instancetype)initSkinView;

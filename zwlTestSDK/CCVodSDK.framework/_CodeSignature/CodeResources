@@ -6,7 +6,7 @@
 	<dict>
 		<key>CCVodSDK.h</key>
 		<data>
-		CYYwgoNqp3mmgsIaHjciy4vN6ro=
+		qIUh2FvP+CuD1N83m+Mx1UwEK7k=
 		</data>
 		<key>DWResource.bundle/Info.plist</key>
 		<data>
@@ -166,7 +166,7 @@
 		</data>
 		<key>Headers/CCVodSDK.h</key>
 		<data>
-		CYYwgoNqp3mmgsIaHjciy4vN6ro=
+		qIUh2FvP+CuD1N83m+Mx1UwEK7k=
 		</data>
 		<key>Headers/DW360Director.h</key>
 		<data>
@@ -230,11 +230,11 @@
 		</data>
 		<key>Headers/DWPlayerSkinView.h</key>
 		<data>
-		02fOmGsQBaYy6O1ZUBYeBfBxncY=
+		rcSx2n00lBlz3Licx9mk/h7s+Ps=
 		</data>
 		<key>Headers/DWPlayerView.h</key>
 		<data>
-		PM9nlp2wBveTOc4kQxV0qcFxm2U=
+		qbKP/X195zFIwKloEyPnQ8YtxYw=
 		</data>
 		<key>Headers/DWUPnPAVPositionInfo.h</key>
 		<data>
@@ -290,11 +290,11 @@
 		</data>
 		<key>Headers/DWVodVideoModel.h</key>
 		<data>
-		waTGhUtCIm6G5tJHERtBBXdjNxw=
+		ouhJSyBtpawzIfcoScsHgq0rLWA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		SXb4FPsrgQ7ZRWSwgtkWSdv5i74=
+		EeHebB1IOfBozpsDNI9wb+RqLr4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -336,11 +336,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CYYwgoNqp3mmgsIaHjciy4vN6ro=
+			qIUh2FvP+CuD1N83m+Mx1UwEK7k=
 			</data>
 			<key>hash2</key>
 			<data>
-			/C8zfjnZxdIfWtidnO7AB06aVrewExLq2Zb/UUO7m+w=
+			Ee9hMAN0a2/KzLW5Av3ID4wDZxRc8SGNOXEnFyJrqqs=
 			</data>
 		</dict>
 		<key>DWResource.bundle/Info.plist</key>
@@ -776,11 +776,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CYYwgoNqp3mmgsIaHjciy4vN6ro=
+			qIUh2FvP+CuD1N83m+Mx1UwEK7k=
 			</data>
 			<key>hash2</key>
 			<data>
-			/C8zfjnZxdIfWtidnO7AB06aVrewExLq2Zb/UUO7m+w=
+			Ee9hMAN0a2/KzLW5Av3ID4wDZxRc8SGNOXEnFyJrqqs=
 			</data>
 		</dict>
 		<key>Headers/DW360Director.h</key>
@@ -952,22 +952,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			02fOmGsQBaYy6O1ZUBYeBfBxncY=
+			rcSx2n00lBlz3Licx9mk/h7s+Ps=
 			</data>
 			<key>hash2</key>
 			<data>
-			HuiD9yjDZuobokGpJrtxysTW028/vM5JaPXrdQNmhyQ=
+			icGSw9vPnpC606EsLOOfvvxwhDZmokyxS9iAlhm00M4=
 			</data>
 		</dict>
 		<key>Headers/DWPlayerView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PM9nlp2wBveTOc4kQxV0qcFxm2U=
+			qbKP/X195zFIwKloEyPnQ8YtxYw=
 			</data>
 			<key>hash2</key>
 			<data>
-			I6WXesRuXEM4a+j7pDxmb2NpHC+nkqzsZwG56ftD1Zc=
+			X12Ycs/JXGAKvGMpsjSceyf/rZ3i3fkQw2KSJmQyGtE=
 			</data>
 		</dict>
 		<key>Headers/DWUPnPAVPositionInfo.h</key>
@@ -1117,11 +1117,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			waTGhUtCIm6G5tJHERtBBXdjNxw=
+			ouhJSyBtpawzIfcoScsHgq0rLWA=
 			</data>
 			<key>hash2</key>
 			<data>
-			2B8sxvfDglUUX8nr69njgOQFYG/n5PbzVuH0NEc7ztY=
+			gP+SgVerk7FjWo9//evrvnTmZ5sDkLFKbgacXDTC898=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

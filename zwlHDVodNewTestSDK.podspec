@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "zwlHDVodNewTestSDK"
 
-  spec.version      = '0.0.18'
+  spec.version      = '0.0.20'
 
   spec.summary      = "An iOS SDK for CCVod Service"
 
@@ -20,8 +20,6 @@ Pod::Spec.new do |spec|
 
   spec.vendored_frameworks = 'zwlTestSDK/CCVodSDK.framework'
 
-  spec.dependency 'HDBaseSDK'
-
   spec.xcconfig = {
       'HEADER_SEARCH_PATHS' => '${SDKROOT}/usr/include/libxml2'
   }
@@ -30,5 +28,6 @@ Pod::Spec.new do |spec|
 
   spec.frameworks = 'CoreServices'
 
+  spec.dependency 'HDBaseSDK' , '~> 0.0.20'
 
 end

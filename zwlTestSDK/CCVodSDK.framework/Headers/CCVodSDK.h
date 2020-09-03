@@ -1,7 +1,5 @@
-//zwl test
-//重新梳理下咯
 //版本号
-#define SDK_VERSION @"4.7.0"
+#define SDK_VERSION @"4.8.1"
 
 #import <CCVodSDK/DWGIFManager.h>
 #import <CCVodSDK/DWAdInfo.h>
@@ -34,51 +32,3 @@
 #import <CCVodSDK/DWBatchDownloadUtility.h>
 #import <CCVodSDK/DWBarrageModel.h>
 #import <CCVodSDK/DWBarrageManager.h>
-
-//zwl test
-/*
-#import "DWLog.h"
-#import "DWVideoCompressController.h"
-#import "DWAdInfo.h"
-
-#import "DWPlayInfo.h"
-
-//下载相关
-#import "DWDownloadSessionManager.h"
-#import "DWDownloadModel.h"
-#import "DWDownloadUtility.h"
-#import "DWBatchDownloadUtility.h"
-
-//上传相关
-#import "DWUploadSessionManager.h"
-#import "DWUploadModel.h"
-
-//VR
-#import "DWVRLibrary.h"
-#import "DWVideoDataAdapter.h"
-#import "DWExt.h"
-#import "DWVRHeader.h"
-#import "DW360Director.h"
-
-#import "DWVodVideoModel.h"
-#import "DWVodAdInfoModel.h"
-
-//弹幕
-#import "DWBarrageManager.h"
-#import "DWBarrageModel.h"
-
-//zwl test
-//新增的
-//等会再全对照一下
-#import "DWPlayerView.h"
-#import "DWPlayerSkinView.h"
-#import "DWGIFManager.h"
-#import "DWUPnPAVPositionInfo.h"
-#import "DWUPnPResponseDelegate.h"
-#import "DWUPnPSubscription.h"
-#import "DWUPnPRenderer.h"
-#import "DWUPnPDevice.h"
-#import "DWUPnPSearch.h"
-*/
-
-
