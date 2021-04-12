@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class DWServiceModel;
 
 @interface DWUPnPDevice : NSObject
@@ -93,3 +95,5 @@
 -(void)setArray:(NSArray *)array;
 
 @end
+
+NS_ASSUME_NONNULL_END

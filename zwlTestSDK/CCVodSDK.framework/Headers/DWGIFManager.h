@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSInteger, GIFQuality) {
     GIFQualityLow  = 0,
     GIFQualityMedium   = 1,
@@ -112,7 +114,7 @@ typedef void(^InterceptBlock)(NSError *error,NSURL *outPutURL);
  * @param outPath 输出路径
  * @param outputFileType 输出视频格式
  * @param videoRange 截取视频的范围
- * @param completeBlock 视频截取的回调
+ * @param intercept 视频截取的回调
  */
 -(void)interceptVideoAndVideoUrl:(NSURL *)videoUrl withOutPath:(NSString *)outPath outputFileType:(NSString *)outputFileType range:(NSRange)videoRange intercept:(InterceptBlock)interceptBlock __attribute__((deprecated("3.3.0 版本已过期")));
 
@@ -152,3 +154,4 @@ typedef void(^InterceptBlock)(NSError *error,NSURL *outPutURL);
 
 @end
 
+NS_ASSUME_NONNULL_END

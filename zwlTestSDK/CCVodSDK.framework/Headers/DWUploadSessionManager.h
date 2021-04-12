@@ -11,6 +11,8 @@
 
 #import <HDBaseUtils/HDURLSessionManager.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol DWUploadSessionManagerDelegate <NSObject>
 
 @optional
@@ -73,18 +75,19 @@
  * @param title 视频标题，不能为nil
  * @param description 视频描述
  * @param tag 视频标签
- * @param path 视频路径，不能为nil
+ * @param videoPath 视频路径，不能为nil
+ * @param categoryId 视频分类
  * @param notifyURL 通知URL
  * @result DWUploadModel对象
  */
 +(DWUploadModel *)createUploadModelWithUserId:(NSString *)userId
                                        Apikey:(NSString *)apikey
                                    VideoTitle:(NSString *)title
-                             VideoDescription:(NSString *)description
-                                     VideoTag:(NSString *)tag
+                             VideoDescription:(nullable NSString *)description
+                                     VideoTag:(nullable NSString *)tag
                                     VideoPath:(NSString *)videoPath
-                                   CategoryId:(NSString *)categoryId
-                                    NotifyURL:(NSString *)notifyURL;
+                                   CategoryId:(nullable NSString *)categoryId
+                                    NotifyURL:(nullable NSString *)notifyURL;
 
 /*!
  * @method
@@ -162,3 +165,5 @@
 -(void)setUploadSession:(NSString *)identifier CompletionHandler:(void (^)())completionHandler;
 
 @end
+
+NS_ASSUME_NONNULL_END

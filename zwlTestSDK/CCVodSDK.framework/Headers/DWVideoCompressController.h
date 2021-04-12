@@ -1,4 +1,7 @@
 #import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  *  @brief 媒体压缩质量
  */
@@ -37,7 +40,9 @@ typedef NS_ENUM(NSInteger, DWUIImagePickerControllerMediaType) {
  * @param mediaType 媒体类型：图片或视频
  * @result DWVideoCompressController对象
  */
--(id)initWithQuality:(DWUIImagePickerControllerQualityType)videoQuality
+-(instancetype)initWithQuality:(DWUIImagePickerControllerQualityType)videoQuality
        andSourceType:(DWUIImagePickerControllerSourceType)sourceType
         andMediaType:(DWUIImagePickerControllerMediaType)mediaType;
 @end
+
+NS_ASSUME_NONNULL_END

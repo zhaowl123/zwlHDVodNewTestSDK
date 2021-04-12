@@ -10,6 +10,9 @@
 @class DWVodVideoModel;
 @class DWDownloadModel;
 @class DWVideoQualityModel;
+@class DWVideoLogoModel;
+
+NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSUInteger, DWPlayerViewTimeOut) {
     DWPlayerViewStatusTimeOutLoad,//加载超时
@@ -152,12 +155,12 @@ typedef NS_ENUM(NSUInteger, DWPlayerViewLoadStyle) {
 /**
  *  @brief 当前正在播放的媒体清晰度model，非在线视频返回nil。注意，在调用playVodViedo:withCustomId:方法后才可获取到此属性
  */
-@property(nonatomic,strong,readonly)DWVideoQualityModel * qualityModel;
+@property(nonatomic,strong,readonly,nullable)DWVideoQualityModel * qualityModel;
 
 /**
  *  @brief 返回当前播放的离线model，在线视频返回nil。注意，在调用playLocalVideo:方法后才可获取到此属性
  */
-@property(nonatomic,strong,readonly)DWDownloadModel * downloadModel;
+@property(nonatomic,strong,readonly,nullable)DWDownloadModel * downloadModel;
 
 /**
  *  @brief 当前播放时长
@@ -168,6 +171,11 @@ typedef NS_ENUM(NSUInteger, DWPlayerViewLoadStyle) {
  *  @brief 当前暂停时长
  */
 @property(nonatomic,assign,readonly)NSTimeInterval pausedTimes;
+
+/**
+ *  @brief 视频自定义Logo。对于在线视频，直接设置即可显示，对于离线视频，调用playLocalVideo:方法播放时，会自动设置下载视频所设置的Logo，无需手动设置。
+ */
+@property(nonatomic,strong)DWVideoLogoModel * videoLogo;
 
 /*!
  * @method
@@ -427,7 +435,7 @@ typedef NS_ENUM(NSUInteger, DWPlayerViewLoadStyle) {
  * @discussion 有此需求的客户调用
  * @param visitorId 访客信息收集器ID，必填
  * @param videoId 视频ID，必填
- * @param userId CC账号ID，必填
+ * @param userId 获得场景视频账号ID，必填
  * @param message 上报信息，必填，具体格式详见demo
  */
 -(void)reportVisitorCollectWithVisitorId:(NSString *)visitorId VideoId:(NSString *)videoId UserId:(NSString *)userId AndMessage:(NSString *)message;
@@ -438,10 +446,12 @@ typedef NS_ENUM(NSUInteger, DWPlayerViewLoadStyle) {
  * @discussion 有此需求的客户调用
  * @param exercisesId 课堂练习ID，必填
  * @param videoId 视频ID，必填
- * @param userId CC账号ID，必填
+ * @param userId 获得场景视频账号ID，必填
  * @param questionMes 上报信息，必填，具体格式详见demo
  * @param completion  完成回调，返回课堂练习结果
 */
 -(void)reportExercisesWithExercisesId:(NSString *)exercisesId videoId:(NSString *)videoId UserId:(NSString *)userId QuestionMes:(NSString *)questionMes AndCompletion:(void (^)(NSArray * resultArray,NSError * error))completion;
 
 @end
+
+NS_ASSUME_NONNULL_END

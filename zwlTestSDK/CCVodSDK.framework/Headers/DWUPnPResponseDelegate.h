@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "DWUPnPAVPositionInfo.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 ///响应解析回调协议
 @protocol DWUPnPResponseDelegate <NSObject>
 
@@ -64,7 +66,7 @@
 -(void)upnpSetNextAVTransportURIResponse;
 
 /** 获取音量信息
- @param info 音量信息
+ @param volume 音量信息
  */
 -(void)upnpGetVolumeResponse:(NSString *)volume;
 
@@ -74,3 +76,5 @@
 -(void)upnpGetPositionInfoResponse:(DWUPnPAVPositionInfo *)info;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 ///下载工具类
 @interface DWDownloadUtility : NSObject
 
@@ -30,3 +32,5 @@
 +(NSString *)calculateUnit:(unsigned long long)contentLength;
 
 @end
+
+NS_ASSUME_NONNULL_END

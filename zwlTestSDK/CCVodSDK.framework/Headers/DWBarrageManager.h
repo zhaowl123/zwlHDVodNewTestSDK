@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DWBarrageModel.h"
 @class DWBarrageManager;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @protocol DWBarrageManagerDelegate <NSObject>
 
@@ -66,3 +67,5 @@
 -(void)cancelRequest;
 
 @end
+
+NS_ASSUME_NONNULL_END

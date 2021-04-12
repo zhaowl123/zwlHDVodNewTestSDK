@@ -10,6 +10,8 @@
 #import <Foundation/Foundation.h>
 #import "DWUPnPResponseDelegate.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class DWUPnPDevice;
 
 /// 此类为控制类，负责发送事件给设备。
@@ -132,4 +134,6 @@
 -(void)setVolumeWith:(NSString *)value;
 
 @end
+
+NS_ASSUME_NONNULL_END
 

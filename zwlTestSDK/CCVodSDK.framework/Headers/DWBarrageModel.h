@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 ///弹幕数据模型
 @interface DWBarrageModel : NSObject
 
@@ -39,3 +41,4 @@
 
 @end
 
+NS_ASSUME_NONNULL_END

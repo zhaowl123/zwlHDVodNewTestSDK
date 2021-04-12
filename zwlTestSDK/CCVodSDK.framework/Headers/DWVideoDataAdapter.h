@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol DWVideoDataAdapter <NSObject>
 
 /** 拷贝数据
@@ -17,3 +19,5 @@
 - (CVPixelBufferRef)copyPixelBuffer;
 
 @end
+
+NS_ASSUME_NONNULL_END

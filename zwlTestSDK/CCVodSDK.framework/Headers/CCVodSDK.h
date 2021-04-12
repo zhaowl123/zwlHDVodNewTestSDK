@@ -1,5 +1,5 @@
 //版本号
-#define SDK_VERSION @"4.8.1"
+#define SDK_VERSION @"4.14.2"
 
 #import <CCVodSDK/DWGIFManager.h>
 #import <CCVodSDK/DWAdInfo.h>
@@ -32,3 +32,4 @@
 #import <CCVodSDK/DWBatchDownloadUtility.h>
 #import <CCVodSDK/DWBarrageModel.h>
 #import <CCVodSDK/DWBarrageManager.h>
+#import <CCVodSDK/DWVideoLogoModel.h>

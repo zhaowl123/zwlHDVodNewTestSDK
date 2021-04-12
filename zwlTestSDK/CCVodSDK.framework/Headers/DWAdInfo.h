@@ -2,6 +2,8 @@
 #import <Foundation/Foundation.h>
 @class DWVodAdInfoModel;
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef void (^DWErrorBlock)(NSError *error);
 typedef void (^DWAdInfoFinishBlock)(DWVodAdInfoModel * adInfo);
 
@@ -32,7 +34,7 @@ typedef void (^DWAdInfoFinishBlock)(DWVodAdInfoModel * adInfo);
  * @param type 广告类型
  * @result DWAdInfo对象
  */
--(id)initWithUserId:(NSString *)userId andVideoId:(NSString *)videoId type:(NSString *)type;
+-(instancetype)initWithUserId:(NSString *)userId andVideoId:(NSString *)videoId type:(NSString *)type;
 
 /*!
  * @method
@@ -42,3 +44,5 @@ typedef void (^DWAdInfoFinishBlock)(DWVodAdInfoModel * adInfo);
 -(void)start;
 
 @end
+
+NS_ASSUME_NONNULL_END

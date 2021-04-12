@@ -12,6 +12,8 @@
 #import <GLKit/GLKit.h>
 #import "DWVRHeader.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 #pragma mark DW360Director
 @interface DW360Director : NSObject<IMDDestroyable>
 
@@ -161,5 +163,5 @@
 
 @end
 
-
+NS_ASSUME_NONNULL_END
 

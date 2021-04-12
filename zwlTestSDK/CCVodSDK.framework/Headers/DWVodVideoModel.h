@@ -19,6 +19,8 @@
 @class DWVideoExercisesQuestionModel;
 @class DWVideoExercisesQuestionAnswerModel;
 
+NS_ASSUME_NONNULL_BEGIN
+
 ///视频数据模型
 @interface DWVodVideoModel : NSObject
     
@@ -93,6 +95,11 @@
 @property(nonatomic, assign, readonly)NSInteger defaultSubtitle;
 
 /**
+ *  @brief 字幕模式，-1 无字幕 ，0 固定字号, 1 自适应模式
+ */
+@property(nonatomic, assign, readonly)NSInteger subtitlemodel;
+
+/**
  *  @brief 字幕1
  */
 @property(nonatomic, strong, readonly)DWVideoSubtitleModel * subtitle;
@@ -128,12 +135,12 @@
 @property(nonatomic, strong, readonly)NSDate * startTime;
 
 /**
- *  @brief cc账号id
+ *  @brief 获得场景视频账号id
  */
 @property(nonatomic, strong, readonly)NSString * CCUserId;
 
 /**
- *  @brief cc账号key
+ *  @brief 获得场景视频账号key
  */
 @property(nonatomic, strong, readonly)NSString * CCApiKey;
 
@@ -322,6 +329,31 @@
  */
 @property(nonatomic, assign, readonly)NSInteger sort;
 
+/**
+ *  @brief 存储文件名
+ */
+@property(nonatomic, strong, readonly)NSString * fileName;
+
+/**
+ *  @brief 存储路径
+ */
+@property(nonatomic, strong, readonly)NSString * filePath;
+
+/**
+ *  @brief 是否下载成功
+ */
+@property(nonatomic, assign, readonly)BOOL isDownload;
+
+/*!
+ * @method
+ * @abstract 计算自适应字幕字体大小
+ * @discussion 计算自适应字幕字体大小
+ * @param size 后台返回字幕字体大小
+ * @param playerWidth 当前播放器宽度，单位pt
+ * @result 计算后的字幕字体大小
+ */
++(CGFloat)getAdaptiveFontSize:(CGFloat)size PlayerWidth:(CGFloat)playerWidth;
+
 @end
 
 ///授权验证信息
@@ -426,7 +458,6 @@
  */
 @property(nonatomic, assign, readonly)NSInteger showTime;
 
-//zwl test
 /**
  *  @brief 是否允许跳过
  */
@@ -468,7 +499,6 @@
  */
 @property(nonatomic, strong, readonly)NSString * explainInfo;
 
-//zwl test
 /**
 *  @brief 问题回看时间点
 */
@@ -540,3 +570,5 @@
 @property(nonatomic, strong)NSString * answerContent;
 
 @end
+
+NS_ASSUME_NONNULL_END

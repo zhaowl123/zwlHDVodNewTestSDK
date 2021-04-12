@@ -18,6 +18,8 @@
 #import <UIKit/UIKit.h>
 #import "DWExt.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol TextureCallback <NSObject>
 @required
 /** 纹理回调
@@ -113,4 +115,7 @@
 
 @end
 
+NS_ASSUME_NONNULL_END
+
 #endif /* DWVRHeader_h */
+

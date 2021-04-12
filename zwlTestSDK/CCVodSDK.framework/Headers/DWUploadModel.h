@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 @class DWUploadWaterMarkModel;
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSUInteger,DWUploadState) {
     DWUploadStateNone     = 0,    //未开始上传
     DWUploadStateReadying,        //准备中
@@ -146,3 +148,5 @@ typedef NS_ENUM(NSUInteger,DWUploadState) {
 @property(nonatomic,strong,readonly)NSNumber * fontAlpha;
 
 @end
+
+NS_ASSUME_NONNULL_END

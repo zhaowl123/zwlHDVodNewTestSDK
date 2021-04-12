@@ -14,6 +14,8 @@
 #import "DWExt.h"
 #import "DWVRHeader.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSInteger, DWModeInteractive) {
     DWModeInteractiveTouch,//触摸
     DWModeInteractiveMotion,//重力感应
@@ -221,3 +223,5 @@ typedef NS_ENUM(NSInteger, DWModeProjection) {
 -(DWModeProjection)getProjectionMode;
 
 @end
+
+NS_ASSUME_NONNULL_END

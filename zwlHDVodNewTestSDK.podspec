@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "zwlHDVodNewTestSDK"
 
-  spec.version      = '0.0.20'
+  spec.version      = '0.1.0'
 
   spec.summary      = "An iOS SDK for CCVod Service"
 
@@ -28,6 +28,6 @@ Pod::Spec.new do |spec|
 
   spec.frameworks = 'CoreServices'
 
-  spec.dependency 'HDBaseSDK' , '~> 0.0.20'
+  spec.dependency 'HDBaseSDK' 
 
 end

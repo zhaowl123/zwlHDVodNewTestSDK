@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 @class DWVodVideoModel;
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef void (^DWErrorBlock)(NSError *error);
 typedef void (^DWPlayInfoFinishBlock)(DWVodVideoModel * vodVideo);
 
@@ -44,7 +46,7 @@ typedef void (^DWPlayInfoFinishBlock)(DWVodVideoModel * vodVideo);
  * @param key 账号key
  * @result DWPlayInfo对象
  */
--(id)initWithUserId:(NSString *)userId andVideoId:(NSString *)videoId key:(NSString *)key;
+-(instancetype)initWithUserId:(NSString *)userId andVideoId:(NSString *)videoId key:(NSString *)key;
 
 /*!
  * @method
@@ -56,7 +58,7 @@ typedef void (^DWPlayInfoFinishBlock)(DWVodVideoModel * vodVideo);
  * @param hlsSupport 获取播放地址时，若账号支持hls，填@"1"会返回m3u8下载地址。获取下载地址时，请填@"0"
  * @result 操作结果
  */
--(id)initWithUserId:(NSString *)userId andVideoId:(NSString *)videoId key:(NSString *)key hlsSupport:(NSString *)hlsSupport;
+-(instancetype)initWithUserId:(NSString *)userId andVideoId:(NSString *)videoId key:(NSString *)key hlsSupport:(NSString *)hlsSupport;
 
 /*!
  * @method
@@ -69,8 +71,9 @@ typedef void (^DWPlayInfoFinishBlock)(DWVodVideoModel * vodVideo);
  * @method
  * @abstract 取消获取视频数据
  * @discussion 取消之后，不会调用errorBlock或finishBlock
- * @param time 当前播放时间
  */
 -(void)cancel;
 
 @end
+
+NS_ASSUME_NONNULL_END

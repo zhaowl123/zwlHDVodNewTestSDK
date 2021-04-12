@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface DWLog : NSObject
 
 /*!
@@ -19,3 +21,5 @@
 +(BOOL)isDebugHttpLog;
 
 @end
+
+NS_ASSUME_NONNULL_END

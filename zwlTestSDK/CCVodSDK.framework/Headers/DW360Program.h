@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "DWVRHeader.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface DW360Program : NSObject<IMDDestroyable>{
     GLuint vertexShaderHandle,fragmentShaderHandle;
     
@@ -85,3 +87,5 @@
 @interface DWYUV420PProgram : DW360Program
 
 @end
+
+NS_ASSUME_NONNULL_END

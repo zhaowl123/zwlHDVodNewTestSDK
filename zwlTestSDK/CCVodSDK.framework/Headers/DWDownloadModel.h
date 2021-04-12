@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
 
 // 下载状态
 typedef NS_ENUM(NSUInteger, DWDownloadState) {
@@ -21,6 +22,8 @@ typedef NS_ENUM(NSUInteger, DWDownloadState) {
 
 @class DWDownloadProgress;
 @class DWDownloadModel;
+@class DWVideoSubtitleModel;
+@class DWVideoLogoModel;
 
 // 进度更新block
 typedef void (^DWDownloadProgressBlock)(DWDownloadProgress *progress,DWDownloadModel *downloadModel);
@@ -97,6 +100,31 @@ typedef void (^DWDownloadStateBlock)(DWDownloadModel *downloadModel, NSError *er
 @property(nonatomic, strong, readonly)NSString * marqueeStr;
 
 /**
+ *  @brief 字幕类型，-1 无字幕 ，0 subtitle, 1 subtitle2, 2 双语
+ */
+@property(nonatomic, assign, readonly)NSInteger defaultSubtitle;
+
+/**
+ *  @brief 字幕模式，-1 无字幕 ，0 固定字号, 1 自适应模式
+ */
+@property(nonatomic, assign, readonly)NSInteger subtitlemodel;
+
+/**
+ *  @brief 字幕1
+ */
+@property(nonatomic, strong, readonly)DWVideoSubtitleModel * subtitle;
+
+/**
+ *  @brief 字幕2
+ */
+@property(nonatomic, strong, readonly)DWVideoSubtitleModel * subtitle2;
+
+/**
+ *  @brief 自定义LOGO
+ */
+@property(nonatomic, strong, readonly)DWVideoLogoModel * videoLogo;
+
+/**
  *  @brief 自定义字段，根据自己需求适当添加，比如添加媒体图片，标题等
  */
 @property(nonatomic, strong)NSDictionary * othersInfo;
@@ -162,3 +190,5 @@ typedef void (^DWDownloadStateBlock)(DWDownloadModel *downloadModel, NSError *er
 @property(nonatomic, assign, readonly)int remainingTime;
 
 @end
+
+NS_ASSUME_NONNULL_END

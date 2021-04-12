@@ -11,6 +11,8 @@
 
 #import <HDBaseUtils/HDURLSessionManager.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class DWVodVideoModel;
 
 // 下载代理
@@ -88,7 +90,17 @@
  * @param othersInfo 自定义字段，可为空
  * @result 创建成功返回DWDownloadModel对象，如果失败，返回nil
  */
-+(DWDownloadModel *)createDownloadModel:(DWVodVideoModel *)videoMdoel Quality:(NSString *)quality AndOthersInfo:(NSDictionary *)othersInfo;
++(DWDownloadModel *)createDownloadModel:(DWVodVideoModel *)videoMdoel Quality:(NSString *)quality AndOthersInfo:(nullable NSDictionary *)othersInfo;
+
+/*!
+ * @method
+ * @abstract 插入自定义LOGO
+ * @discussion 在startWithDownloadModel:方法前调用，否则会导致自定义水印无法正常下载
+ * @param downloadModel DWDownloadModel对象
+ * @param videoLogo 自定义水印对象
+ * @result 插入成功返回YES，失败返回NO
+ */
+-(BOOL)insertVideoLogoWithDownloadModel:(DWDownloadModel *)downloadModel VideoLogo:(DWVideoLogoModel *)videoLogo;
 
 /*!
  * @method
@@ -210,16 +222,18 @@
  * @param totalBytesExpectedToWrite 文件的总大小。对于未完成的任务，必填
  * @result 若过渡成功，返回DWDownloadModel对象，否则返回nil
  */
--(DWDownloadModel *)migrateDownloadTask:(NSString *)loaclPath
-                            DownloadUrl:(NSString *)downloadUrl
-                              MediaType:(NSString *)mediaType
-                                Quality:(NSString *)quality
-                                   Desp:(NSString *)desp
+-(DWDownloadModel *)migrateDownloadTask:(nullable NSString *)loaclPath
+                            DownloadUrl:(nullable NSString *)downloadUrl
+                              MediaType:(nullable NSString *)mediaType
+                                Quality:(nullable NSString *)quality
+                                   Desp:(nullable NSString *)desp
                                  VRMode:(BOOL)vrMode
-                             OthersInfo:(NSDictionary *)othersInfo
-                                 UserId:(NSString *)userId
-                                VideoId:(NSString *)videoId
+                             OthersInfo:(nullable NSDictionary *)othersInfo
+                                 UserId:(nullable NSString *)userId
+                                VideoId:(nullable NSString *)videoId
                       TotalBytesWritten:(int64_t)totalBytesWritten
               TotalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite;
 
 @end
+
+NS_ASSUME_NONNULL_END
