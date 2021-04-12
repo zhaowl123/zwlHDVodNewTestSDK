@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "zwlTestBaseSDK"
 
-  spec.version      = '0.0.20'
+  spec.version      = '0.1.1'
 
   spec.summary      = "An iOS Base SDK for HD Service"
 

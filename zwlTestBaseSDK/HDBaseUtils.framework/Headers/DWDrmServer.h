@@ -11,6 +11,11 @@
  */
 @property (assign, nonatomic, readonly)UInt16 listenPort;
 
+/**
+ *  @brief 是否使用ijkPlayer，默认NO
+ */
+@property(nonatomic,assign)BOOL isIJKPlayer;
+
 /*!
  * @method
  * @abstract 初始化DWDrmServer

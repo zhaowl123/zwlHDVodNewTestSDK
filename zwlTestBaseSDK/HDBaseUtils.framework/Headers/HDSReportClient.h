@@ -8,11 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
+//日志类别
+typedef NS_ENUM(int, CCErrorLevel) {
+    CCErrorLevel_VERBOSE = 2,
+    CCErrorLevel_DEBUG = 3,
+    CCErrorLevel_INFO = 4,
+    CCErrorLevel_WARN = 5,
+    CCErrorLevel_ERROR = 6,
+    CCErrorLevel_ASSERT = 7,
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark -- 云课堂使用
 @interface HDSReportInfo : NSObject
 @property(nonatomic,assign)NSTimeInterval responseTime;
+@property(nonatomic,assign)CCErrorLevel   level;
+@property(nonatomic,copy)NSString         *socketUrl;
+
 //基本数据
 @property(nonatomic,copy)NSString       *var_business;
 @property(nonatomic,copy)NSString       *var_appVer;
@@ -31,9 +44,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)int          event_code;
 @property(nonatomic,copy)NSString       *event_msg;
 //data
-@property(nonatomic,copy)NSDictionary   *event_data_requestmsg;
-@property(nonatomic,copy)NSDictionary   *event_data_responsemsg;
-@property(nonatomic,copy)NSDictionary   *event_data_stream;
+@property(nonatomic,strong)NSDictionary   *event_data_requestmsg;
+@property(nonatomic,strong)NSDictionary   *event_data_responsemsg;
+@property(nonatomic,strong)NSDictionary   *event_data_stream;
+@property(nonatomic,strong)NSDictionary   *event_data_pusher;
+@property(nonatomic,strong)NSDictionary   *event_data_heartBeat;
 
 @end
 
